@@ -1,0 +1,215 @@
+.navbar {
+    width: 100%;
+    height: 83px;
+    background: var(--primary-100);
+    color: var(--primary-300);
+    z-index: 1000;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    box-shadow: 0px 2px 4px rgba(22, 22, 22, 0.1);
+    margin-bottom: 2rem;
+}
+
+.navbar.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    gap: 3rem;
+}
+
+.navbar-1 {
+    width: 15rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-1 img {
+    width: 100%;
+    height: 2.5rem;
+}
+
+.navbar-2 {
+    width: calc(100% - 10rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.05rem;
+    gap: 1rem;
+}
+
+.navbar-2-1 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-2-1 ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    cursor: pointer;
+    opacity: 0.9;
+    padding-left: 0;
+    margin-bottom: 0;
+} 
+
+.navbar-2-1 ul:hover {
+    opacity: 1;
+}
+
+.navbar-2-1 ul li a {
+    position: relative;
+    color: var(--primary-300);
+}
+
+.navbar-2-1 ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--primary-300);
+    transition: all 0.45s;
+}
+
+.navbar-2-1 ul li a:hover::before {
+    width: 100%;
+}
+
+.navbar-2-2 {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+.navbar-open {
+    display: none;
+    font-size: 2.2rem;
+    margin-right: 1rem;
+    color: var(--primary-300);
+}
+
+.navbar-close {
+    display: none;
+    font-size: 3rem;
+    color: var(--primary-300);
+    margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar-2-1 ul {
+        gap: 1rem;
+    } 
+}
+
+@media screen and (max-width: 820px) {
+    .navbar-2-1 ul {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .wrapper {
+        width: 80%;
+        justify-content: space-between;
+    }
+    
+    .navbar-open {
+        display: block;
+    }
+
+    .navbar-1 {
+        width: 15rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-1 img {
+        width: 100%;
+        height: 3rem;
+    }
+
+    .navbar-close {
+        display: block;
+    }
+
+    .navbar-2 {
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--primary-300);
+        background-color: var(--primary-100);
+        width: 40%;
+        height: 100%;
+        transform: translateX(110%);
+        transition: all .45s;
+        z-index: 1000;
+    }
+
+    .active {
+        transform: translateX(0);
+    }
+
+    .navbar-2-1 {
+        width: 100%;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--primary-100);
+    }
+
+    .navbar-2-1 ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        cursor: pointer;
+        opacity: 0.9;
+        color: var(--primary-100);
+    } 
+
+    .navbar-2-2 {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-weight: 600;
+        margin-top: 2rem;
+    }
+
+    .navbar-2-2 .signup-btn a {
+        color: var(--primary-100);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .wrapper {
+        width: 90%;
+    }
+}
