@@ -6,6 +6,7 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 2rem;
+    padding-top: 3rem;
 }
 
 .main-text {
@@ -16,6 +17,7 @@
 }
 
 .main-text h1 {
+    text-align: center;
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
@@ -23,6 +25,7 @@
 }
 
 .main-text h2 {
+    text-align: center;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -154,6 +157,52 @@
     }
 
     .main-wrapper {
-        height: 30rem;
+        height: 75vh;
+        background-color: var(--primary-200);
+    }
+
+    .main-text h1 {
+        font-size: 40px;
+    }
+
+    .main-text h2 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .main-container {
+        width: 5.25rem;
+        height: 7.25rem;
+        border: 3px var(--primary-300) solid;
+    }
+
+    .main-img {
+        width: 4.173rem;
+        height: 4.032rem;
+    }
+
+    .main-name {
+        margin-top: 0.5rem;
+        font-size: 0.4rem;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: 0.4rem;
+        text-align: center;
+    }
+
+    .main-wrapper {
+        height: 60vh;
+        background-color: var(--primary-200);
+    }
+
+    .main-text h1 {
+        font-size: 40px;
+    }
+
+    .main-text h2 {
+        font-size: 15px;
     }
 }
